@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="css/lab.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="fullpage.continuousHorizontal.min.js"></script>
+<script type="text/javascript" src="fullpage/fullpage.extensions.min.js"></script>
 </head>
 <div id="main-section">
 	<h1> Clothes the Wearable Expression</h1>
@@ -17,17 +19,33 @@
 		<img src="closet/streetwear1.jpg"><img src="closet/the-full-suit-rx-78-2-gundam-cosplay-26m-tall-414881.jpg">	<img src="closet/streetwear44.jpeg">
 
 
-<body>
+		import React from 'react';
+		import ReactDOM from 'react-dom';
+		import ReactFullpage from '@fullpage/react-fullpage';
 
-	<div id="fullpage">
-	    <div class="section">One</div>
-	    <div class="section">
-	        <div class="slide" data-anchor="slide1">Two 1</div>
-	        <div class="slide" data-anchor="slide2">Two 2</div>
-	    </div>
-	    <div class="section">Three</div>
-	    <div class="section">Four</div>
-	</div>
+		const Fullpage = () => (
+		  <ReactFullpage
+		    //fullpage options
+		    licenseKey = {'YOUR_KEY_HERE'}
+		    scrollingSpeed = {1000} /* Options here */
 
-</body>
+		    render={({ state, fullpageApi }) => {
+		      return (
+		        <ReactFullpage.Wrapper>
+		          <div className="section">
+		            <p>Section 1 (welcome to fullpage.js)</p>
+		            <button onClick={() => fullpageApi.moveSectionDown()}>
+		              Click me to move down
+		            </button>
+		          </div>
+		          <div className="section">
+		            <p>Section 2</p>
+		          </div>
+		        </ReactFullpage.Wrapper>
+		      );
+		    }}
+		  />
+		);
+
+		ReactDOM.render(<Fullpage />, document.getElementById('react-root'));
 </html>
