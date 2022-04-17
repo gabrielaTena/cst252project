@@ -1,33 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Project Github Repo</title>
-	<link rel="stylesheet" type="text/css" href="../css/site.css">
-	<link rel="stylesheet" type="text/css" href="css/lab.css">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	<meta charset="utf-8">
+	<title>Wearable Expressions</title>
+	<!-- JQuery Library -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <!-- Parallax Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <!-- Page JS file -->
+  <script src="js/lab.js" defer></script>
+  <!-- Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Bootstrap Library -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Page CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/lab.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
 </head>
-<div id="main-section">
-	<h1> Clothes the Wearable Expression</h1>
-</div>
-<div id="welcome">
-	<h1 class="ml6">
-  <span class="text-wrapper">
-    <span class="letters"> Clothes the Wearable Expression</span>
-  </span>
-</h1>
-<div id="main-section">
-	<h1> Clothes the Wearable Expression</h1>
-</div>
-	<h2> Hi there!</h2>
-	<p>
-		"“Our page consists of self-expression through a set of symbols. Clothes play an important role in our everyday lives since certain colors, patterns, and accessories can present our backgrounds and personalities. Each possession in your wardrobe signifies a sense of cultural belonging and personal style. On this page, you will discover the art of clothes within the context and components of different aesthetics. There is no right or wrong in the way you express yourself, as long as it’s you."</p>
-		<img src="closet/streetwear.jpg">
-
-
-<body>
-
-
+	<nav class="navbar navbar-expand-xxl bg-dark navbar-dark">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">
+	      <img src="img/logo.png" alt="" width="40px">
+	    </a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	      <ul class="navbar-nav">
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Link</a>
+	        </li>
+	        <li class="nav-item">
+	         <a class="nav-link" href="#">Link</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Link</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<section class="banner">
+	  <div class="container1">
+	    <div id="scene">
+	      <div class="layer"><img src="img/background.png" alt=""></div>
+	      <div class="layer" data-depth="0.5"><img src="img/people.png" alt=""></div>
+	      <div class="layer" data-depth-y="0.5"><img src="img/bench.png" alt=""></div>
+	    </div>
+	  </div>
+	  <h2 id="text">
+	  	<span id="title1">Wearable</span><br>
+	    <span id="title2">Expressions</span>
+	  </h2>
+	  <div class="arrow">
+	    <a href="#" id="icon"><ion-icon name="chevron-down-outline"></a>
+	  </div>
+	</section>
 </body>
 </html>
