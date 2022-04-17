@@ -104,6 +104,78 @@ section #text{
   min-height: 400px;
   background: transparent;
 }
+/* Second portion of page*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body:{
+  font-size: 1.3rem;
+  background: grey;
+}
+
+.container{
+  max-width: 1100px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 2rem;
+}
+
+.tittle{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.tittle h1{
+  font-size; 4rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+.tittle p{
+  font-size: 2rem;
+}
+
+img{
+  width:;
+}
+.segments img{
+  height:400px;
+}
+
+.segments{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  background: grey;
+  margin-bottom: 3rem;
+  height: 600px;
+  margin-top: 40px;
+  padding: 40px;
+  border-style: solid red;
+}
+.btn{
+  display: inline-block;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover{
+  opacity: 0.8;
+}
+
+@media(max-with: 700px){
+  .segments{
+    display: block;
+  }
+}
 
 /* img
 {
