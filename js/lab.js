@@ -59,8 +59,10 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 
 $(".info").click(function(){
   $(".information").toggle("slow");
+  $(".shawn-info").hide("");
 });
 
 $("#shawn-btn").click(function(){
   $(".shawn-info").toggle("slow");
+  $(".information").hide("");
 });
