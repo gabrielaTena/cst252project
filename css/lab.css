@@ -149,7 +149,11 @@ section #text{
 .closet-section p{
   padding: 10px;
 }
-
+.paragraph{
+  border: solid white;
+  background-color: white;
+  margin: 1rem;
+}
 .closet-section img{
   margin: 1rem;
 }
