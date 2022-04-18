@@ -223,3 +223,9 @@ footer{
   background-color: grey;
   color: white;
 }
+
+.footer-title{
+  text-align: center;
+  font-family: 'Rancho', cursive;
+  font-size: 3em;
+}
