@@ -150,9 +150,27 @@ section #text{
   padding: 10px;
 }
 
+.closet-section img{
+  margin: 1rem;
+}
+
+.btn-secondary{
+  margin: 1rem;
+}
+
 .top-closet{
   border: 1px solid #3c2020;
   height: 10vh;
+}
+
+.card{
+  margin: 1rem;
+}
+
+.information,
+.shawn-info,
+.funfact{
+  display: none;
 }
 
 /* Footer Styling */
