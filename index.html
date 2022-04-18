@@ -1,136 +1,151 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Wearable Expressions</title>
-	<!-- JQuery Library -->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <!-- Parallax Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-  <!-- Page JS file -->
-  <script src="js/lab.js" defer></script>
-  <!-- Icons -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <!-- Bootstrap Library -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- Page CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/lab.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
-	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
-</head>
-	<nav class="navbar navbar-expand-xxl bg-dark navbar-dark">
-	  <div class="container-fluid">
-	    <a class="navbar-brand" href="#">
-	      <img src="img/logo.png" alt="" width="40px">
-	    </a>
-	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-	      <span class="navbar-toggler-icon"></span>
-	    </button>
-	    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-	      <ul class="navbar-nav">
-	        <li class="nav-item">
-	          <a class="nav-link" href="#">Link</a>
-	        </li>
-	        <li class="nav-item">
-	         <a class="nav-link" href="#">Link</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#">Link</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </div>
-	</nav>
-	<section class="banner">
-	  <div class="container1">
-	    <div id="scene">
-	      <div class="layer"><img src="img/background.png" alt=""></div>
-	      <div class="layer" data-depth="0.5"><img src="img/people.png" alt=""></div>
-	      <div class="layer" data-depth-y="0.5"><img src="img/bench.png" alt=""></div>
-	    </div>
-	  </div>
-	  <h2 id="text">
-	  	<span id="title1">Wearable</span><br>
-	    <span id="title2">Expressions</span>
-	  </h2>
-	  <div class="arrow">
-	    <a href="#" id="icon"><ion-icon name="chevron-down-outline"></a>
-	  </div>
-	</section>
-
-	<!--second portion of page-->
-	<main class="container">
-		<section class="segments">
-			<div>
-			<h2>Closet section</h2>
-			<p>text here</p>
-			<a href="#style2" class="btn">Continue</a>
-		</div>
-		</section>
-
-	<!--first style-->
-		<main class="container">
-			<section class="segments">
-			<img src="img/outfit1.jpeg"
-		</div>
-				<div>
-				<h2>2000s</h2>
-				<p>Clothing from the 2000s was directly influenced by globalization, the rise of fast fashion, and celebrities as style icons.</p>
-				<br>
-				<p> Technology and Y2K had a huge impact on fashion in the early 2000s. The color palette was filled with shiny black tones and reflective metallics. Denim became a staple for men and women, going beyond jeans to shirts, jackets, and hats.</p>
-				<br>
-				<p>As the decade went on, 2000s fashion began to take cues from 1960s bohemian looks. Low-rise jeans, cowl-neck shirts, capri pants, cropped jackets, and dresses over jeans were popular outfit choices for women. For men outfit options included light wash bootcut jeans, cargo shorts, classic rock t-shirts, fitted cowboy shirts, and polos with popped collars.
-	 </p>
-				<br>
-				<p> Towards the late 2000s neon colors, animal prints, geometric shapes, and light denim jeggings were reintroduced from previous decades. Men’s late 2000s fashion was a mix of 1950s and 1980s throwbacks, with letterman and black leather jackets, overcoats, slim cut jeans, Ed Hardy t-shirts, flannel shirts, and V-neck sweaters. </p>
-
-				<a href="#style2" class="btn">Continue</a>
-
-			</div>
-			</section>
-
-			<section class="segments" data-aos="fade-left">
-				<div id="style2">
-				<h2>Second section</h2>
-				<p>text here</p>
-				<a href="#style3" class="btn">Continue</a>
-			</div>
-			</section>
-
-			<section class="segments" data-aos="fade-right">
-				<div id="style3">
-				<h2>Third section</h2>
-				<p>text here</p>
-				<a href="#style4" class="btn">Continue</a>
-			</div>
-
-			</section>
-
-			<section class="segments" data-aos="fade-left">
-				<div id="style4">
-				<h2>Fourth section</h2>
-				<p>text here</p>
-				<a href="#" class="btn">Continue</a>
-			</div>
-			</section>
-
-
-
-
-			<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		  <script>
-		    AOS.init({
-					offset: 400,
-					duration: 1000,
-				}
-				);
-		  </script>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Wearable Expressions</title>
+    <!-- JQuery Library -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- Parallax Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Page JS file -->
+    <script src="js/lab.js" defer></script>
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Bootstrap Library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Page CSS file -->
+    <link rel="stylesheet" href="css/lab.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xxl bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="" width="40px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#cosplay">Cosplay</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#2000s">2000's</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#streetwear">Streetwear</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="banner">
+      <div class="container1">
+        <div id="scene">
+          <div class="layer"><img src="img/background.png" alt=""></div>
+          <div class="layer" data-depth="0.5"><img src="img/people.png" alt=""></div>
+          <div class="layer" data-depth-y="0.5"><img src="img/bench.png" alt=""></div>
+        </div>
+      </div>
+      <h2 id="text">
+        <span id="title1">Wearable</span><br>
+        <span id="title2">Expressions</span>
+      </h2>
+      <div class="arrow">
+        <h3 id="top-scroll">Scroll Down</h3>
+        <a href="#" id="icon"><ion-icon name="chevron-down-outline"></a>
+      </div>
+    </section>
+    <!--second portion of page-->
+    <main class="container-md pt-5 pb-5">
+      <h2 class="section-title" id="cosplay">Cosplay</h2>
+      <section class="container-sm segments" data-aos="flip-down">
+        <div class="row">
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <img src="img/mirror.png" alt="" width="100%">
+          </div>
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          </div>
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          </div>
+        </div>
+      </section>
+      <h2 class="section-title" id="2000s">2000's</h2>
+      <section class="container-sm segments" data-aos="zoom-in-left">
+        <div class="row">
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <img src="img/mirror.png" alt="" width="100%">
+          </div>
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          </div>
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          </div>
+        </div>
+      </section>
+      <h2 class="section-title" id="streetwear">Streetwear</h2>
+      <section class="container-sm segments" data-aos="zoom-in-up">
+        <div class="row">
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <img src="img/mirror.png" alt="" width="100%">
+          </div>
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          </div>
+          <div class="col-sm-4 closet-section">
+            <h3 class="top-closet"></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <ul id="members">
+          <li>Gabriela Tena</li>
+          <li>Stephanie Nava</li>
+          <li>Jason Matthew</li>
+        </ul>
+        <div id="logo-middle">
+          <img src="img/logo.png" alt="" width="50px">
+        </div>
+        <div id="sites">
+          <ul id="site-links">
+            <li><a href="#">Gabriela's Page</a></li>
+            <li><a href="https://senava.github.io/cst252/">Stephanie's Page</a></li>
+            <li><a href="#">Jason's Page</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

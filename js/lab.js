@@ -8,14 +8,45 @@
 var scene = $('#scene').get(0);
 var parallaxInstance = new Parallax(scene);
 
-// new fullpage('#fullpage', {
-//   sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
-// });
-//
-// $('#getActiveSlide').click(function(){
-//    console.log(fullpage_api.getActiveSlide());
-// });
-//
-// $('#getActiveSection').click(function(){
-//    console.log(fullpage_api.getActiveSection());
-// });
+AOS.init();
+
+// special thanks to https://www.youtube.com/watch?v=GUEB9FogoP8
+// grab section title
+const text = document.querySelector(".section-title");
+const strText = text.textContent;
+
+// split strText
+const splitText = strText.split("");
+console.log(splitText);
+
+// hide second section title once span element is added
+text.textContent = "";
+
+// create loop
+for (let i = 0; i < splitText.length; i++){
+  // add span element to section title
+  text.innerHTML += "<span>" + splitText[i] + "</span>";
+}
+
+// create animation style that allows each element to show up
+let char = 0;
+let timer = setInterval(onTick, 100);
+
+// create function for onTick
+function onTick(){
+  const span = text.querySelectorAll('span')[char];
+  // add class to each span element
+  span.classList.add('fade');
+  char++
+  // add if statement to stop loop
+  if(char === splitText.length){
+    complete();
+    return;
+  }
+}
+
+function complete(){
+  // clear timer interval
+  clearInterval(timer);
+  timer = null;
+}
