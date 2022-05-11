@@ -66,3 +66,57 @@ $("#shawn-btn").click(function(){
   $(".shawn-info").toggle("slow");
   $(".information").hide("");
 });
+
+
+$(".box1").mouseover(function(){
+// start Video
+$(".box1 video").trigger("play");
+})
+
+$(".box1").mouseout(function(){
+// start Video
+$(".box1 video").trigger("pause");
+})
+
+$(".box1").click(function(){
+// go to link1
+$('html, body').animate({
+ scrollTop: $("#link1").offset().top
+}, 2000);
+})
+
+
+$(".box2").mouseover(function(){
+// start Video
+$(".box2 video").trigger("play");
+})
+
+$(".box2").mouseout(function(){
+// start Video
+$(".box2 video").trigger("pause");
+})
+
+$(".box2").click(function(){
+// go to link1
+$('html, body').animate({
+ scrollTop: $("#link2").offset().top
+}, 2000);
+})
+
+
+$(".box3").mouseover(function(){
+// start Video
+$(".box3 video").trigger("play");
+})
+
+$(".box3").mouseout(function(){
+// start Video
+$(".box3 video").trigger("pause");
+})
+
+$(".box3").click(function(){
+// go to link1
+$('html, body').animate({
+ scrollTop: $("#link2").offset().top
+}, 2000);
+})
