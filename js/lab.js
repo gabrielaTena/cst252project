@@ -275,3 +275,7 @@ function myFunctionThree(imgsThree) {
   expandImgThree.src = imgsThree.src;
   expandImgThree.parentElement.style.display = "block";
 }
+var x = 0;
+$("figcaption").scroll(function(){
+    $("span").text( x+= 1);
+  });
