@@ -8,7 +8,7 @@ body{
   overflow-x: hidden;
   min-height: 100vh;
   width: 100%;
-  background-color: bisque;
+  background-color: white;
   z-index: -1;
 }
 
@@ -254,7 +254,17 @@ footer{
 
 
 /* dashboard glass styling */
-.glass{
+.glass1{
+  background: linear-gradient(to right bottom, #a9bffd, #eca13eb3);
+  border-radius: 1rem;
+  margin-bottom: 1.5em;
+}
+.glass2{
+  background: linear-gradient(to right bottom, #ffa5f8, #8bc34a);
+  border-radius: 1rem;
+  margin-bottom: 1.5em;
+}
+.glass3{
   background: linear-gradient(to right bottom, #ffa5f8, #03a9f4b3);
   border-radius: 1rem;
   margin-bottom: 1.5em;
