@@ -100,9 +100,9 @@
   object-position: top;
 }
 
-#cosplayPlayer,
-#twoThousandPlayer,
-#streetwearPlayer{
+#cosplayVideo,
+#twoVideo,
+#swVideo{
   height: 300px;
   width: 500px;
   padding: 1rem;

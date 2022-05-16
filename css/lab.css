@@ -300,6 +300,10 @@ footer{
   padding: 5%;
 }
 
+.cosplay-img img{
+  width: 75%;
+}
+
 .user-info{
   flex: 2;
   margin-left: 1rem;
@@ -343,7 +347,6 @@ overflow: hidden;
   transform: translateX(-50%);
   height: 350px;
 }
-
 
 
 .column {

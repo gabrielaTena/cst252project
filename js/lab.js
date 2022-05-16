@@ -29,11 +29,17 @@ var parallaxInstance = new Parallax(scene);
 // Getting multiple iframes to show up ↑
 
   // 2. This code loads the IFrame Player API code asynchronously.
+  // var tag = document.createElement('script');
+  //
+  // tag.src = "https://www.youtube.com/iframe_api";
+  // var firstScriptTag = document.getElementsByTagName('script')[0];
+  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   var tag = document.createElement('script');
-
-  tag.src = "https://www.youtube.com/iframe_api";
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 
   // create variables for different fashion video players
   var youtubePlayer1;
@@ -42,12 +48,9 @@ var parallaxInstance = new Parallax(scene);
 
   // 3. This function creates an <iframe> (and YouTube player)
   //    after the API code downloads.
+  // var player;
   function onYouTubeIframeAPIReady() {
     youtubePlayer1 = new YT.Player('cosplayPlayer',{
-      // height: '300',
-      // width: '500',
-      videoId: '_VEf_yBKZXs',
-      // events that allows video api to communicate
       events: {
         // define function that allows autoplay when ready
         'onReady': onPlayerReady,
@@ -56,10 +59,6 @@ var parallaxInstance = new Parallax(scene);
       }
     });
     youtubePlayer2 = new YT.Player('twoThousandPlayer',{
-      // height: '300',
-      // width: '500',
-      videoId: 's4PqXNCkNgY',
-      // events that allows video api to communicate
       events: {
         // define function that allows autoplay when ready
         'onReady': onPlayerReady,
@@ -67,11 +66,7 @@ var parallaxInstance = new Parallax(scene);
         'onStateChange': onPlayerStateChange
       }
     });
-    youtubePlayer3 = new YT.Player('streetwearPlayer',{
-      // height: '300',
-      // width: '500',
-      videoId: 'QjNp19IUifs',
-      // events that allows video api to communicate
+    youtubePlayer3 = new YT.Player('swPlayer',{
       events: {
         // define function that allows autoplay when ready
         'onReady': onPlayerReady,
@@ -79,8 +74,80 @@ var parallaxInstance = new Parallax(scene);
         'onStateChange': onPlayerStateChange
       }
     });
-    console.log("YouTube is Ready!!");
   }
+
+  function onPlayerReady(event) {
+    document.getElementById('cosplayPlayer').style.borderColor = '#FF6D00';
+    document.getElementById('twoPlayer').style.borderColor = '#FF6D00';
+    document.getElementById('swPlayer').style.borderColor = '#FF6D00';
+  }
+  function changeBorderColor(playerStatus) {
+    var color;
+    if (playerStatus == -1) {
+      color = "#37474F"; // unstarted = gray
+    } else if (playerStatus == 0) {
+      color = "#FFFF00"; // ended = yellow
+    } else if (playerStatus == 1) {
+      color = "#33691E"; // playing = green
+    } else if (playerStatus == 2) {
+      color = "#DD2C00"; // paused = red
+    } else if (playerStatus == 3) {
+      color = "#AA00FF"; // buffering = purple
+    } else if (playerStatus == 5) {
+      color = "#FF6DOO"; // video cued = orange
+    }
+    if (color) {
+      document.getElementById('cosplayPlayer').style.borderColor = color;
+      document.getElementById('twoPlayer').style.borderColor = color;
+      document.getElementById('swPlayer').style.borderColor = color;
+    }
+  }
+  function onPlayerStateChange(event) {
+    changeBorderColor(event.data);
+  }
+
+  // function onYouTubeIframeAPIReady() {
+  //   youtubePlayer1 = new YT.Player('cosplayPlayer',{
+  //     // height: '300',
+  //     // width: '500',
+  //     videoId: '_VEf_yBKZXs',
+  //     // events that allows video api to communicate
+  //     events: {
+  //       // define function that allows autoplay when ready
+  //       'onReady': onPlayerReady,
+  //       // define function to play video again
+  //       'onStateChange': onPlayerStateChange
+  //     }
+  //   });
+  //   youtubePlayer2 = new YT.Player('twoThousandPlayer',{
+  //     // height: '300',
+  //     // width: '500',
+  //     videoId: 's4PqXNCkNgY',
+  //     // events that allows video api to communicate
+  //     events: {
+  //       // define function that allows autoplay when ready
+  //       'onReady': onPlayerReady,
+  //       // define function to play video again
+  //       'onStateChange': onPlayerStateChange
+  //     }
+  //   });
+  //   youtubePlayer3 = new YT.Player('streetwearPlayer',{
+  //     // height: '300',
+  //     // width: '500',
+  //     videoId: 'QjNp19IUifs',
+  //     playerVars: {
+  //       'playsinline': 1
+  //     },
+  //     // events that allows video api to communicate
+  //     events: {
+  //       // define function that allows autoplay when ready
+  //       'onReady': onPlayerReady,
+  //       // define function to play video again
+  //       'onStateChange': onPlayerStateChange
+  //     }
+  //   });
+  //   console.log("YouTube is Ready!!");
+  // }
 
   // var player;
   // function playThisVideo(vidid){
