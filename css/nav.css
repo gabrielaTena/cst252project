@@ -1,0 +1,121 @@
+.header-area{
+  background: #142440;
+  width: 100%;
+  padding: 12px;
+  z-index: 999;
+  border-bottom: #909090ad
+}
+
+.header-container{
+  width: 100%;
+  margin: auto;
+  display: table;
+  z-index: 1;
+}
+
+.site-logo{
+  float: left;
+  padding: 20px 25px;
+}
+
+.site-logo img{
+  text-decoration: none;
+  filter: invert();
+}
+
+.hamburger-nav{
+  display: none;
+}
+
+.site-nav-menu{
+  float: right;
+}
+
+.primary-menu{
+  list-style: none;
+}
+
+.primary-menu li{
+  display: inline-block;
+  margin: 21px 5px;
+}
+
+.primary-menu a{
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 15px 10px;
+  transition: .5s;
+}
+
+.primary-menu a:hover,
+.primary-menu .active{
+  color: #ff4a44;
+}
+
+.primary-menu li a:after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ff4a44;
+  bottom: 0px;
+  left: 0;
+  transition: all .5s;
+}
+
+.primary-menu li a:hover:after{
+  width: 100%;
+}
+
+.primary-menu li .active:after{
+  width: 100%;
+}
+
+.hamburger-nav{
+  float: right;
+  margin: 10px;
+  padding: 10px;
+  font-size: 24px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Responsive navbar */
+@media only screen and (max-width: 1024px) {
+  .site-nav-menu{
+    float: none;
+    position: absolute;
+    background: #142440;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 85px;
+    padding: 10px 0px 100px 0px;
+    clip-path: circle(0% at 100% 0%);
+    transition: all .8s;
+  }
+
+  .primary-menu li{
+    display: block;
+    text-align: center;
+    margin: 40px 5px;
+    padding-left: 25%;
+  }
+
+  .hamburger-nav{
+    display: block;
+  }
+
+  .hamburger-menu{
+    clip-path: circle(80% at 100% 0%);
+  }
+
+  .primary-menu li a:after{
+    display: none;
+  }
+}

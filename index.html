@@ -2,24 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wearable Expressions</title>
     <!-- JQuery Library -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" defer></script>
     <!-- Parallax Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <!-- AOS Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Page JS file -->
     <script src="js/lab.js" defer></script>
-    <!-- Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/ba2bb3a197.js" crossorigin="anonymous"></script>
     <!-- Bootstrap Library -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Page CSS file -->
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/lab.css">
     <link rel="stylesheet" href="css/closet.css">
     <!-- Google Fonts -->
@@ -32,29 +29,29 @@
      crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-xxl bg-dark navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="img/logo.png" alt="" width="40px">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#cosplay">Cosplay</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#2000s">2000's</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#streetwear">Streetwear</a>
-            </li>
+    <!-- Navbar Section -->
+    <header class="header-area">
+      <div class="header-container">
+        <div class="site-logo">
+          <a href="#">
+            <img src="img/logo.png" width="40px">
+          </a>
+        </div>
+        <div class="hamburger-nav">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="site-nav-menu">
+          <ul class="primary-menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#cosplay" class="">Cosplay</a></li>
+            <li><a href="#2000" class="">2000s</a></li>
+            <li><a href="#sw" class="">Streetwear</a></li>
+            <li><a href="#members" class="">Group Members</a></li>
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
+    <!-- Landing Page Home Screen Section -->
     <section class="banner">
       <div class="container1">
         <div id="scene">
@@ -69,431 +66,560 @@
       </h2>
       <div class="arrow">
         <h3 id="top-scroll">Scroll Down</h3>
-        <a href="#" id="icon"><ion-icon name="chevron-down-outline"></a>
+        <a href="#" id="icon"><i class="fa-solid fa-chevron-down"></i></a>
       </div>
     </section>
-    <!--second portion of page-->
-    <main>
-      <div class="closet">
-      <!-- Cosplay Area -->
-      <div class="box" id="cosplay">
-        <h1 class="title">Cosplay</h1>
-        <div class="image-container">
-            <!-- <img class="card-img" src="closet-img/cosplay.jpg" alt=""> -->
-            <div class="video-box box1">
-                   <img class="cover" src="placeholder1.jpg">
-                   <video src="Art Chocky, Gumbasia.mp4" ></video>
+    <!-- Closet Section: Intro to different sections -->
+    <div class="closet" id="home">
+      <!-- Cosplay Section -->
+      <div class="wrapper">
+        <h1 class="section-title">Cosplay</h1>
+        <div class="box-holder">
+          <div class="closet-img">
+            <img src="img/cosplay.jpeg" alt="">
+          </div>
+          <div id="cosplayPlayer"></div>
+        </div>
+        <div class="individual-section">
+          <p>Want to learn more...</p>
+          <button class="more-info" onclick="window.location.href='#cosplay'">
+            <span class="btn-text">Click Here</span>
+            <span class="btn-icon">
+              <i class="fa-solid fa-hand-point-right"></i>
+            </span>
+          </button>
+        </div>
+        <!-- door style image -->
+        <div class="door" id="left-door">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="knob" id="left-knob"></div>
+        </div>
+        <div class="door" id="right-door">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="knob" id="right-knob"></div>
         </div>
       </div>
-      <!-- 2000 Area -->
-      <div class="box" id="two-thousand">
-        <h1 class="title">2000s</h1>
-        <div class="image-container">
-            <!-- <img class="card-img" src="closet-img/2000.jpeg" alt=""> -->
-            <div class="video-box box2">
-                   <video src="Video\2000sOutfitTikTok.mp4" ></video>
+      <!-- 2000s Section -->
+      <div class="wrapper">
+        <h1 class="section-title">2000s Fashion</h1>
+        <div class="box-holder">
+          <div class="closet-img">
+            <img id="twoHover" src="img/overview.jpeg" alt="">
+          </div>
+          <div id="twoThousandPlayer"></div>
+        </div>
+        <div class="individual-section">
+          <p>Want to learn more...</p>
+          <button class="more-info" onclick="window.location.href='#2000'">
+            <span class="btn-text">Click Here</span>
+            <span class="btn-icon">
+              <i class="fa-solid fa-hand-point-right"></i>
+            </span>
+          </button>
+        </div>
+        <!-- door style image -->
+        <div class="door" id="left-door">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="knob" id="left-knob"></div>
+        </div>
+        <div class="door" id="right-door">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="knob" id="right-knob"></div>
         </div>
       </div>
-      <!-- Streetwear Area -->
-      <div class="box" id="streetwear">
-        <h1 class="title">Streetwear</h1>
-        <div class="image-container">
-            <!-- <img class="card-img" src="closet-img/streetwear.png" alt=""> -->
-        </div><div class="video-box box3">
-        <video src="Video\StreetwearTiktok1.mp4" ></video>
+      <!-- Streetwear Section -->
+      <div class="wrapper">
+        <h1 class="section-title">Streetwear Fashion</h1>
+        <div class="box-holder">
+          <div class="closet-img">
+            <img id="wearHover" src="img/street-fashion.png" alt="">
+          </div>
+          <div id="streetwearPlayer"></div>
+        </div>
+        <div class="individual-section">
+          <p>Want to learn more...</p>
+          <button class="more-info" onclick="window.location.href='#sw'">
+            <span class="btn-text">Click Here</span>
+            <span class="btn-icon">
+              <i class="fa-solid fa-hand-point-right"></i>
+            </span>
+          </button>
+        </div>
+        <!-- door style image -->
+        <div class="door" id="left-door">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="knob" id="left-knob"></div>
+        </div>
+        <div class="door" id="right-door">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="knob" id="right-knob"></div>
+        </div>
       </div>
     </div>
-    </main>
-
-    <!--Sections 1 (2000s) -->
+    <!-- Second portion of page: Individual Sections -->
     <main class="container-md pt-5 pb-5">
-    <div class="col-md-9">
-      <div class="glass">
-        <div class="topbar">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="lab-tab" data-bs-toggle="tab" data-bs-target="#lab" type="button" aria-labelledby="overview-tab" role="tab" aria-selected="true">Overview</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="challenge-tab" data-bs-toggle="tab" data-bs-target="#challenge" type="button" aria-labelledby="early-tab" role="tab" aria-selected="false">Early 2000s</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#problem" type="button" role="tab" aria-labelledby="mid-tab" aria-selected="false">Mid 2000s</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="result-tab" data-bs-toggle="tab" data-bs-target="#result" type="button" role="tab" aria-labelledby="late-tab" aria-selected="false">Late 2000s</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-labelledby="comeback-tab" aria-selected="false">Comeback?</button>
-            </li>
-          </ul>
-        </div>
-
-        <div class="dashboard">
-          <div class="row">
-<div class="column">
-  <img src="img/hip-hop.jpeg" alt="Many rappers influenced fashion <br> with their own clothing lines in the 2000s.<br> Many looks included baggy jeans, tall t-shirts, sports jerseys,<br> and sneakers like Adidas Superstars or Nike Air Force 1s." style="width:100%" onclick="myFunction(this);">
-
-</div>
-<div class="column">
-  <img src="img/emo.jpeg" alt="Outfits were often all or mostly black with skinny jeans, band t-shirts, studded belts, and checkered Vans." style="width:100%" onclick="myFunction(this);">
-</div>
-<div class="column">
-  <img src="img/streetwear.jpeg" alt="Streetwear is often brand focused casual clothing, <br> like jeans, tees, and sneakers. Sneakers were an important part of the look, <br>especially retro Nike Air Jordan’s and Adidas Yeezys." style="width:100%" onclick="myFunction(this);">
-</div>
-<div class="column">
-  <img src="img/scene.jpeg" alt="Scene styles became popular at the end of the decade <br> and were influenced by indie, rave, and punk fashion. <br> A popular scene hairstyle was bright neon dyed hair teased and swept to the side" style="width:100%" onclick="myFunction(this);">
-</div>
-</div>
-
-<div class="container">
-<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-<img id="expandedImg" style="width:100%">
-<div id="imgtext"></div>
-</div>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="lab" role="tabpanel" aria-labelledby="overview-tab">
-              <div class="cards">
-                <div class="picture">
-                  <img src="img/overview.jpeg" alt="">
-                </div>
-                <div class="user-info">
-                  <div class="user-title">
-                    <h2>Wearable expression</h2>
-                  </div>
-                  <div class="caption">
-                    <figcaption>Clothing from the 2000s was directly influenced by globalization, the rise of fast fashion, and celebrities as style icons.</figcaption>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="challenge" role="tabpanel" aria-labelledby="early-tab">
-              <div class="cards">
-                <div class="picture">
-                  <img src="img/2000-early.jpeg" alt="" id="challenge-img">
-                </div>
-                <div class="user-info">
-                  <div class="user-title">
-                    <h2>Early 2000s</h2>
-                  </div>
-                  <div class="caption">
-                    <figcaption>Technology and Y2K had a huge impact on fashion in the early 2000s. Denim became a staple for men and women, going beyond jeans to shirts, jackets, and hats.</figcaption>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="problem" role="tabpanel" aria-labelledby="mid-tab">
-              <div class="cards">
-                <div class="picture">
-                  <img src="img/mid2000s.jpeg" alt="">
-                </div>
-                <div class="user-info">
-                  <div class="user-title">
-                    <h2>Mid 2000s</h2>
-                  </div>
-                  <div class="caption">
-                    <figcaption>As the decade went on, 2000s fashion began to take cues from 1960s bohemian looks. Low-rise jeans, cropped jackets, and dresses over jeans were popular outfit choices for women. For men outfit options included light wash bootcut jeans, cargo shorts, and polos with popped collars.</figcaption>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="result" role="tabpanel" aria-labelledby="late-tab">
-              <div class="cards">
-                <div class="picture">
-                  <img src="img/late2000s.jpeg" alt="" id="result-img">
-                </div>
-                <div class="user-info">
-                  <div class="user-title">
-                    <h2>Late 2000s</h2>
-                  </div>
-                  <div class="caption">
-                    <figcaption>Towards the late 2000s neon colors, animal prints, and geometric shapes were reintroduced from previous decades. Men’s fashion was a mix of 1950s and 1980s throwbacks, with letterman and black leather jackets, overcoats, slim cut jeans, flannel shirts, and V-neck sweaters.</figcaption>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="comeback-tab">
-              <div class="cards">
-                <div class="picture">
-                  <img src="img/comeback.jpeg" alt="" id="result-img">
-                </div>
-                <div class="user-info">
-                  <div class="user-title">
-                    <h2>Comeback?</h2>
-                  </div>
-                  <div class="caption">
-                    <figcaption> Gen Z has begun rocking bootcut jeans and silk scarves as tops on TikTok. Soon after, we saw the aesthetic pop up on the runways too, where labels like Blumarine have debuted ruffled minidresses, blingy belts, and low-slung denim. And now, the trend is gaining momentum on the streets as well.</figcaption>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- Area 1 (Cosplay) -->
+      <div class="col-md-9" id="cosplay">
+        <div class="glass">
+          <!-- tabs area where one can chose which content they will like to see -->
+          <div class="topbar">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="cosplay1" data-bs-toggle="tab" data-bs-target="#cosplayV" type="button" aria-labelledby="cosplayv" role="tab" aria-selected="true">Overview</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cosplay2" data-bs-toggle="tab" data-bs-target="#cosplayW" type="button" aria-labelledby="cosplayw" role="tab" aria-selected="false">Early 2000s</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cosplay3" data-bs-toggle="tab" data-bs-target="#cosplayX" type="button" role="tab" aria-labelledby="cosplayx" aria-selected="false">Mid 2000s</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cosplay4" data-bs-toggle="tab" data-bs-target="#cosplayY" type="button" role="tab" aria-labelledby="cosplayy" aria-selected="false">Late 2000s</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cosplay5" data-bs-toggle="tab" data-bs-target="#cosplayZ" type="button" role="tab" aria-labelledby="cosplayz" aria-selected="false">Comeback?</button>
+              </li>
+            </ul>
           </div>
-        </div>
-      </div>
-              </div>
-            </div>
-          </div>
-  <!--Sections 2 (Streetwear) -->
-  <div class="col-md-9">
-                  <div class="glass">
-                    <div class="topbar">
-
-                      <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="section1" data-bs-toggle="tab" data-bs-target="#lab" type="button" aria-labelledby="section1-tab" role="tab" aria-selected="true">section1</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="section2" data-bs-toggle="tab" data-bs-target="#challenge" type="button" aria-labelledby="section2-tab" role="tab" aria-selected="false">section2</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="section3" data-bs-toggle="tab" data-bs-target="#problem" type="button" role="tab" aria-labelledby="section3-tab" aria-selected="false">section3</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="section4" data-bs-toggle="tab" data-bs-target="#result" type="button" role="tab" aria-labelledby="section4-tab" aria-selected="false">section4</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="section5" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-labelledby="section5-tab" aria-selected="false">section5</button>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="dashboard">
-                      <div class="row">
-            <div class="column">
-              <img src="img/" alt="text?" style="width:100%" onclick="myFunction(this);">
-
-            </div>
-            <div class="column">
-              <img src="img/" alt="" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-              <img src="img/" alt="" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-              <img src="img/" alt="" style="width:100%" onclick="myFunction(this);">
-            </div>
-          </div>
-
-          <div class="container">
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-            <img id="expandedImg" style="width:100%">
-            <div id="imgtext"></div>
-          </div>
-                      <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="lab" role="tabpanel" aria-labelledby="section1-tab">
-                          <div class="cards">
-                            <div class="picture">
-                              <img src="img/" alt="">
-                            </div>
-                            <div class="user-info">
-                              <div class="user-title">
-                                <h2>section1</h2>
-                              </div>
-                              <div class="caption">
-                                <figcaption>info .</figcaption>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-pane fade" id="challenge" role="tabpanel" aria-labelledby="section2-tab">
-                          <div class="cards">
-                            <div class="picture">
-                              <img src="img/" alt="" id="challenge-img">
-                            </div>
-                            <div class="user-info">
-                              <div class="user-title">
-                                <h2>Section2</h2>
-                              </div>
-                              <div class="caption">
-                                <figcaption>text</figcaption>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-pane fade" id="problem" role="tabpanel" aria-labelledby="section3-tab">
-                          <div class="cards">
-                            <div class="picture">
-                              <img src="img/" alt="">
-                            </div>
-                            <div class="user-info">
-                              <div class="user-title">
-                                <h2>section3</h2>
-                              </div>
-                              <div class="caption">
-                                <figcaption>text</figcaption>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-pane fade" id="result" role="tabpanel" aria-labelledby="section4-tab">
-                          <div class="cards">
-                            <div class="picture">
-                              <img src="img/" alt="" id="result-img">
-                            </div>
-                            <div class="user-info">
-                              <div class="user-title">
-                                <h2>section4</h2>
-                              </div>
-                              <div class="caption">
-                                <figcaption> text</figcaption>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="section5-tab">
-                          <div class="cards">
-                            <div class="picture">
-                              <img src="img/" alt="" id="result-img">
-                            </div>
-                            <div class="user-info">
-                              <div class="user-title">
-                                <h2>section5</h2>
-                              </div>
-                              <div class="caption">
-                                <figcaption> text</figcaption>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                          </div>
-                        </div>
-                      </div>
-    <!--Sections 3 (Cosplay) -->
-    <div class="col-md-9">
-                    <div class="glass">
-                      <div class="topbar">
-
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="section1" data-bs-toggle="tab" data-bs-target="#lab" type="button" aria-labelledby="section1-tab" role="tab" aria-selected="true">section1</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="section2" data-bs-toggle="tab" data-bs-target="#challenge" type="button" aria-labelledby="section2-tab" role="tab" aria-selected="false">section2</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="section3" data-bs-toggle="tab" data-bs-target="#problem" type="button" role="tab" aria-labelledby="section3-tab" aria-selected="false">section3</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="section4" data-bs-toggle="tab" data-bs-target="#result" type="button" role="tab" aria-labelledby="section4-tab" aria-selected="false">section4</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="section5" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-labelledby="section5-tab" aria-selected="false">section5</button>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="dashboard">
-                        <div class="row">
+          <!-- main dashboard -->
+          <div class="dashboard">
+            <!-- images on top row -->
+            <div class="row">
               <div class="column">
-                <img src="img/" alt="text?" style="width:100%" onclick="myFunction(this);">
-
+                <img src="img/hip-hop.jpeg"
+                alt="Many rappers influenced fashion <br> with their own clothing lines in the 2000s.<br> Many looks included baggy jeans, tall t-shirts, sports jerseys,<br> and sneakers like Adidas Superstars or Nike Air Force 1s."
+                style="width:100%" onclick="myFunction(this);">
               </div>
               <div class="column">
-                <img src="img/" alt="" style="width:100%" onclick="myFunction(this);">
+                <img src="img/emo.jpeg"
+                alt="Outfits were often all or mostly black with skinny jeans, band t-shirts, studded belts, and checkered Vans."
+                style="width:100%" onclick="myFunction(this);">
               </div>
               <div class="column">
-                <img src="img/" alt="" style="width:100%" onclick="myFunction(this);">
+                <img src="img/streetwear.jpeg"
+                alt="Streetwear is often brand focused casual clothing, <br> like jeans, tees, and sneakers. Sneakers were an important part of the look, <br>especially retro Nike Air Jordan’s and Adidas Yeezys."
+                style="width:100%" onclick="myFunction(this);">
               </div>
               <div class="column">
-                <img src="img/" alt="" style="width:100%" onclick="myFunction(this);">
+                <img src="img/scene.jpeg"
+                alt="Scene styles became popular at the end of the decade <br> and were influenced by indie, rave, and punk fashion. <br> A popular scene hairstyle was bright neon dyed hair teased and swept to the side."
+                style="width:100%" onclick="myFunction(this);">
               </div>
             </div>
-
+            <!-- images expand + close button -->
             <div class="container">
               <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
               <img id="expandedImg" style="width:100%">
               <div id="imgtext"></div>
             </div>
-                        <div class="tab-content" id="myTabContent">
-                          <div class="tab-pane fade show active" id="lab" role="tabpanel" aria-labelledby="section1-tab">
-                            <div class="cards">
-                              <div class="picture">
-                                <img src="img/" alt="">
-                              </div>
-                              <div class="user-info">
-                                <div class="user-title">
-                                  <h2>section1</h2>
-                                </div>
-                                <div class="caption">
-                                  <figcaption>info .</figcaption>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane fade" id="challenge" role="tabpanel" aria-labelledby="section2-tab">
-                            <div class="cards">
-                              <div class="picture">
-                                <img src="img/" alt="" id="challenge-img">
-                              </div>
-                              <div class="user-info">
-                                <div class="user-title">
-                                  <h2>Section2</h2>
-                                </div>
-                                <div class="caption">
-                                  <figcaption>text</figcaption>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane fade" id="problem" role="tabpanel" aria-labelledby="section3-tab">
-                            <div class="cards">
-                              <div class="picture">
-                                <img src="img/" alt="">
-                              </div>
-                              <div class="user-info">
-                                <div class="user-title">
-                                  <h2>section3</h2>
-                                </div>
-                                <div class="caption">
-                                  <figcaption>text</figcaption>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane fade" id="result" role="tabpanel" aria-labelledby="section4-tab">
-                            <div class="cards">
-                              <div class="picture">
-                                <img src="img/" alt="" id="result-img">
-                              </div>
-                              <div class="user-info">
-                                <div class="user-title">
-                                  <h2>section4</h2>
-                                </div>
-                                <div class="caption">
-                                  <figcaption> text</figcaption>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="section5-tab">
-                            <div class="cards">
-                              <div class="picture">
-                                <img src="img/" alt="" id="result-img">
-                              </div>
-                              <div class="user-info">
-                                <div class="user-title">
-                                  <h2>section5</h2>
-                                </div>
-                                <div class="caption">
-                                  <figcaption> text</figcaption>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+            <!-- tab content information -->
+            <div class="tab-content" id="myTabContent">
+              <!-- first tab information -->
+              <div class="tab-pane fade show active" id="cosplayW" role="tabpanel" aria-labelledby="cosplayv">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/overview.jpeg" alt="">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Cosplay</h2>
                     </div>
-                            </div>
-                          </div>
-                        </div>
+                    <div class="caption">
+                      <figcaption>Clothing from the 2000s was directly influenced
+                      by globalization, the rise of fast fashion, and celebrities
+                      as style icons.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- second tab information -->
+              <div class="tab-pane fade" id="cosplayW" role="tabpanel" aria-labelledby="cosplayw">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/2000-early.jpeg" alt="" id="challenge-img">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Early 2000s</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>Technology and Y2K had a huge impact on fashion
+                      in the early 2000s. Denim became a staple for men and women,
+                      going beyond jeans to shirts, jackets, and hats.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- third tab information -->
+              <div class="tab-pane fade" id="cosplayX" role="tabpanel" aria-labelledby="cosplayx">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/mid2000s.jpeg" alt="">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Mid 2000s</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>As the decade went on, 2000s fashion began to
+                      take cues from 1960s bohemian looks. Low-rise jeans, cropped
+                      jackets, and dresses over jeans were popular outfit choices
+                      for women. For men outfit options included light wash bootcut
+                      jeans, cargo shorts, and polos with popped collars.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fourth tab information -->
+              <div class="tab-pane fade" id="cosplayY" role="tabpanel" aria-labelledby="cosplayy">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/late2000s.jpeg" alt="" id="result-img">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Late 2000s</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>Towards the late 2000s neon colors, animal prints,
+                      and geometric shapes were reintroduced from previous decades.
+                      Men’s fashion was a mix of 1950s and 1980s throwbacks, with
+                      letterman and black leather jackets, overcoats, slim cut jeans,
+                      flannel shirts, and V-neck sweaters.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fifth tab information -->
+              <div class="tab-pane fade" id="cosplayZ" role="tabpanel" aria-labelledby="cosplayz">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/comeback.jpeg" alt="" id="result-img">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Comeback?</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption> Gen Z has begun rocking bootcut jeans and silk
+                      scarves as tops on TikTok. Soon after, we saw the aesthetic pop
+                      up on the runways too, where labels like Blumarine have debuted
+                      ruffled minidresses, blingy belts, and low-slung denim. And
+                      now, the trend is gaining momentum on the streets as well.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- Closes Tabs div -->
+          </div> <!-- Closes Dashboard div -->
+        </div> <!-- Closes Glass div -->
+      </div> <!-- Closes Cosplay div -->
+      <!-- Area 2 (2000s ) -->
+      <div class="col-md-9" id="2000">
+        <div class="glass">
+          <!-- tabs area where one can chose which content they will like to see -->
+          <div class="topbar">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="lab-tab" data-bs-toggle="tab" data-bs-target="#lab" type="button" aria-labelledby="overview-tab" role="tab" aria-selected="true">Overview</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="challenge-tab" data-bs-toggle="tab" data-bs-target="#challenge" type="button" aria-labelledby="early-tab" role="tab" aria-selected="false">Early 2000s</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#problem" type="button" role="tab" aria-labelledby="mid-tab" aria-selected="false">Mid 2000s</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="result-tab" data-bs-toggle="tab" data-bs-target="#result" type="button" role="tab" aria-labelledby="late-tab" aria-selected="false">Late 2000s</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-labelledby="comeback-tab" aria-selected="false">Comeback?</button>
+              </li>
+            </ul>
+          </div>
+          <!-- main dashboard -->
+          <div class="dashboard">
+            <!-- images on top row -->
+            <div class="row">
+              <div class="column">
+                <img src="img/hip-hop.jpeg"
+                alt="Many rappers influenced fashion <br> with their own clothing lines in the 2000s.<br> Many looks included baggy jeans, tall t-shirts, sports jerseys,<br> and sneakers like Adidas Superstars or Nike Air Force 1s."
+                style="width:100%" onclick="myFunctionTwo(this);">
+              </div>
+              <div class="column">
+                <img src="img/emo.jpeg"
+                alt="Outfits were often all or mostly black with skinny jeans, band t-shirts, studded belts, and checkered Vans."
+                style="width:100%" onclick="myFunctionTwo(this);">
+              </div>
+              <div class="column">
+                <img src="img/streetwear.jpeg"
+                alt="Streetwear is often brand focused casual clothing, <br> like jeans, tees, and sneakers. Sneakers were an important part of the look, <br>especially retro Nike Air Jordan’s and Adidas Yeezys."
+                style="width:100%" onclick="myFunctionTwo(this);">
+              </div>
+              <div class="column">
+                <img src="img/scene.jpeg"
+                alt="Scene styles became popular at the end of the decade <br> and were influenced by indie, rave, and punk fashion. <br> A popular scene hairstyle was bright neon dyed hair teased and swept to the side."
+                style="width:100%" onclick="myFunctionTwo(this);">
+              </div>
+            </div>
+            <!-- images expand + close button -->
+            <div class="container">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              <img id="expandedImgTwo" style="width:100%">
+              <div id="imgtextTwo"></div>
+            </div>
+            <!-- tab content information -->
+            <div class="tab-content" id="myTabContent">
+              <!-- first tab information -->
+              <div class="tab-pane fade show active" id="lab" role="tabpanel" aria-labelledby="overview-tab">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/overview.jpeg" alt="">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>2000's Fashion</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>Clothing from the 2000s was directly influenced
+                      by globalization, the rise of fast fashion, and celebrities
+                      as style icons.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- second tab information -->
+              <div class="tab-pane fade" id="challenge" role="tabpanel" aria-labelledby="early-tab">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/2000-early.jpeg" alt="" id="challenge-img">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Early 2000s</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>Technology and Y2K had a huge impact on fashion
+                      in the early 2000s. Denim became a staple for men and women,
+                      going beyond jeans to shirts, jackets, and hats.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- third tab information -->
+              <div class="tab-pane fade" id="problem" role="tabpanel" aria-labelledby="mid-tab">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/mid2000s.jpeg" alt="">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Mid 2000s</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>As the decade went on, 2000s fashion began to
+                      take cues from 1960s bohemian looks. Low-rise jeans, cropped
+                      jackets, and dresses over jeans were popular outfit choices
+                      for women. For men outfit options included light wash bootcut
+                      jeans, cargo shorts, and polos with popped collars.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fourth tab information -->
+              <div class="tab-pane fade" id="result" role="tabpanel" aria-labelledby="late-tab">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/late2000s.jpeg" alt="" id="result-img">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Late 2000s</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>Towards the late 2000s neon colors, animal prints,
+                      and geometric shapes were reintroduced from previous decades.
+                      Men’s fashion was a mix of 1950s and 1980s throwbacks, with
+                      letterman and black leather jackets, overcoats, slim cut jeans,
+                      flannel shirts, and V-neck sweaters.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fifth tab information -->
+              <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="comeback-tab">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="img/comeback.jpeg" alt="" id="result-img">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Comeback?</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption> Gen Z has begun rocking bootcut jeans and silk
+                      scarves as tops on TikTok. Soon after, we saw the aesthetic pop
+                      up on the runways too, where labels like Blumarine have debuted
+                      ruffled minidresses, blingy belts, and low-slung denim. And
+                      now, the trend is gaining momentum on the streets as well.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- Closes Tabs div -->
+          </div> <!-- Closes Dashboard div -->
+        </div> <!-- Closes Glass div -->
+      </div> <!-- Closes 2000s div -->
+      <!-- Area 3 (Streetwear) -->
+      <div class="col-md-9" id="sw">
+        <div class="glass">
+          <!-- tabs area where one can chose which content they will like to see -->
+          <div class="topbar">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="sw1" data-bs-toggle="tab" data-bs-target="#swV" type="button" aria-labelledby="swv" role="tab" aria-selected="true">Overview</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sw2" data-bs-toggle="tab" data-bs-target="#swW" type="button" aria-labelledby="sww" role="tab" aria-selected="false">History</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sw3" data-bs-toggle="tab" data-bs-target="#swX" type="button" role="tab" aria-labelledby="swx" aria-selected="false">Creator</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sw4" data-bs-toggle="tab" data-bs-target="#swY" type="button" role="tab" aria-labelledby="swy" aria-selected="false">Styles</button>
+              </li>
+            </ul>
+          </div>
+          <!-- main dashboard -->
+          <div class="dashboard">
+            <!-- images on top row -->
+            <div class="row">
+              <div class="column">
+                <img src="streetwearImg/sw1.jpeg"
+                style="width:80%" onclick="myFunctionThree(this);">
+              </div>
+              <div class="column">
+                <img src="streetwearImg/sw5.jpeg"
+                style="width:80%" onclick="myFunctionThree(this);">
+              </div>
+              <div class="column">
+                <img src="streetwearImg/sw3.png"
+                style="width:80%" onclick="myFunctionThree(this);">
+              </div>
+              <div class="column">
+                <img src="streetwearImg/sw4.png"
+                style="width:80%" onclick="myFunctionThree(this);">
+              </div>
+            </div>
+            <!-- images expand + close button -->
+            <div class="container">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              <img id="expandedImgThree" style="width:100%">
+              <div id="imgtextThree"></div>
+            </div>
+            <!-- tab content information -->
+            <div class="tab-content" id="myTabContent">
+              <!-- first tab information -->
+              <div class="tab-pane fade show active" id="swV" role="tabpanel" aria-labelledby="swv">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="streetwearImg/sw6.png" alt="">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Streetwear Fashion</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>Streetwear fashion is the epitome of modern urban
+                      fashion. You can see it pretty much everywhere and everyone
+                      tend to interpretate this style differently. But the main meaning
+                      for it is the same all way round. Click through the different
+                      tabs to learn a bit more about Streetwear Fashion.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- second tab information -->
+              <div class="tab-pane fade" id="swW" role="tabpanel" aria-labelledby="sww">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="streetwearImg/sw7.jpeg" alt="">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>History</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>This type of style evolved from the streets in the 1980s. It
+                      was originated from the California surks and skate culture<br>
+                      Todays major designers/ brands/ influencers all embrace streetwear
+                      style and it is not confined to the streets anymore.
+                      It encompasses dreams and aspirations of Urban Youth and
+                      represents a lot of Anti-establishment attitude.<br></br>
+                      The one who first created this well known streetwear brands
+                      was Shaun Stussy. You can learn more about him in the next tab.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- third tab information -->
+              <div class="tab-pane fade" id="swX" role="tabpanel" aria-labelledby="swx">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="streetwearImg/shawn.jpeg" alt="" id="challenge-img">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Who is Shaun?</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>Shaun Stussy was born in 1954 and was a Californian
+                      manufacturer of surfboards. His brand started when he scrawled his
+                      surname on a handcrafted board. After that, he then used this logo
+                      on T-shirts, shorts, and caps. He started selling his clothing
+                      out of his car around Laguna Beach, California. Thus the beginning
+                      of Streetwear Fashion.</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fourth tab information -->
+              <div class="tab-pane fade" id="swY" role="tabpanel" aria-labelledby="swy">
+                <div class="cards">
+                  <div class="picture">
+                    <img src="streetwearImg/sw8.png" alt="" id="result-img">
+                  </div>
+                  <div class="user-info">
+                    <div class="user-title">
+                      <h2>Different Styles</h2>
+                    </div>
+                    <div class="caption">
+                      <figcaption>There are different kinds of streetwear fashion
+                      one can see. But I will list just a few on here.</figcaption>
+                      <ul>
+                        <li>Skatewear</li>
+                        <li>Hypebeasts</li>
+                        <li>Techwear</li>
+                        <li>Athleisure</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- Closes Tabs div -->
+          </div> <!-- Closes Dashboard div -->
+        </div> <!-- Closes Glass div -->
+      </div> <!-- Closes Cosplay div -->
     </main>
-      <!--Sections 1 (2000s) -->
     <!-- Footer -->
     <footer>
-      <h2 class="footer-title">Contributors</h2>
+      <h2 class="footer-title" id="members">Contributors</h2>
       <div class="footer-content">
         <ul id="members">
           <li>Gabriela Tena</li>
